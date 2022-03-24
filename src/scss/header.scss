@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  padding: 10px 20px;
+  height: 100px;
+  align-items: center;
+  h3, a {
+    font-size: 32px;
+    color: #3a3531;
+    text-decoration: none;
+  }
+  img{
+      width: 200px;
+  }
+}
+
+.container {
+  margin: 5% 2% 0px 2%;
+  .make_it_happen {
+    // height: 40vh;
+
+    margin: 5% 0% 0px 0%; 
+
+    h4 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-top: 2%;
+
+      margin-bottom: 2%;
+    }
+  }
+  .company_moto {
+    margin-top: 5%;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .company_description {
+    margin-top: 30px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+.container_fluid {
+  margin: 5% 0% 5% 0%;
+}
+
+.cb-marquee {
+  margin-top: 50px;
+}
+
+.footer {
+  justify-content: space-between;
+  height: 100%;
+  padding: 60px 0;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  color: #fff;
+  background: #000;
+
+  .footer-body {
+    .footer-container {
+      margin: 5% 5% 0% 5%;
+    }
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    // height: 100vh;
+    .outro-header {
+      h4, a {
+        font-size: 60px;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -635,6 +635,212 @@ em {
   background: #fff;
 }
 
+.cb-marquee {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+.cb-marquee-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 33vh 0;
+}
+.cb-marquee-container {
+  width: 100%;
+}
+.cb-marquee-header {
+  position: relative;
+  z-index: 11;
+  padding-bottom: 20vh;
+}
+.cb-marquee-header h1, .cb-marquee-header h2 {
+  position: relative;
+  font-size: 5vw;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.cb-marquee-main {
+  overflow: hidden;
+}
+.cb-marquee-carousel.-v1 {
+  margin-right: -300px;
+  margin-bottom: 11px;
+}
+@media (min-width: 768px) {
+  .cb-marquee-carousel.-v1 {
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 1600px) {
+  .cb-marquee-carousel.-v1 {
+    margin-bottom: 23px;
+  }
+}
+.cb-marquee-carousel.-v2 {
+  margin-left: -300px;
+}
+.cb-marquee-items {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 150px;
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+     -moz-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+       -o-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+@media (min-width: 768px) {
+  .cb-marquee-items {
+    height: 250px;
+  }
+}
+@media (min-width: 1600px) {
+  .cb-marquee-items {
+    height: 300px;
+  }
+}
+.cb-marquee-item {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-right: 11px;
+  width: 150px;
+  height: 100%;
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .cb-marquee-item {
+    width: 250px;
+    margin-right: 16px;
+    -webkit-border-radius: 24px;
+       -moz-border-radius: 24px;
+            border-radius: 24px;
+  }
+}
+@media (min-width: 1600px) {
+  .cb-marquee-item {
+    width: 300px;
+    margin-right: 23px;
+    -webkit-border-radius: 34px;
+       -moz-border-radius: 34px;
+            border-radius: 34px;
+  }
+}
+.cb-marquee-item img {
+  width: 100%;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  height: 100px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar h3, .navbar a {
+  font-size: 32px;
+  color: #3a3531;
+  text-decoration: none;
+}
+.navbar img {
+  width: 200px;
+}
+
+.container {
+  margin: 5% 2% 0px 2%;
+}
+.container .make_it_happen {
+  margin: 5% 0% 0px 0%;
+}
+.container .make_it_happen h4 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.container .company_moto {
+  margin-top: 5%;
+  font-size: 26px;
+  font-weight: 600;
+}
+.container .company_description {
+  margin-top: 30px;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.container_fluid {
+  margin: 5% 0% 5% 0%;
+}
+
+.cb-marquee {
+  margin-top: 50px;
+}
+
+.footer {
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 60px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  color: #fff;
+  background: #000;
+}
+.footer .footer-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer .footer-body .footer-container {
+  margin: 5% 5% 0% 5%;
+}
+.footer .footer-body .outro-header h4, .footer .footer-body .outro-header a {
+  font-size: 60px;
+  font-weight: 500;
+}
+
 .cb-tabs {
   position: relative;
 }
