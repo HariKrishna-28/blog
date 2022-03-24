@@ -1003,6 +1003,13 @@ em {
     font-size: 60px;
   }
 }
+.cb-outro-header img {
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  width: 250px;
+  margin-top: 50px;
+}
 .cb-outro-list {
   margin: 40px 0 0 0;
 }
