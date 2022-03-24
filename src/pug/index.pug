@@ -7,9 +7,17 @@ block content
 
     .cb-layout#view-main
         .cb-content
-
             .cb-tabs.-inverse
                 .cb-tabs-navs
+                    h3 
+                        a(href="#about") ABOUT
+                    h3
+                        a(href="#projects") PROJECTS
+                    h3
+                        a(href="#contributions") CONTRIBUTIONS
+                    h3
+                        a(href="#social") SOCIAL
+                    
                     //- .cb-tabs-nav.-active
                     //- .cb-tabs-nav
                     //- .cb-tabs-nav
@@ -77,16 +85,15 @@ block content
                                 .cb-demo-header
                                     h1 Awesome#[br] particles
                                 
-            section.cb-outro
+            section.cb-outro#about
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
                             h2 About
-
                         .cb-outro-list
                             .cb-outro-list-item: span I am a self taught web developer and python programmer. I seek challenging opportunities where I can fully use my skills for the success of the organisation.
             
-            section.cb-outro
+            section.cb-outro#areas-of-interest
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
@@ -95,7 +102,7 @@ block content
                         .cb-outro-list
                             .cb-outro-list-item: span Full stack web development
 
-            section.cb-outro
+            section.cb-outro#currently-learning
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
@@ -105,7 +112,7 @@ block content
                             .cb-outro-list-item: span NextJs and SailsJs
                         
 
-            section.cb-outro
+            section.cb-outro#projects
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
@@ -116,7 +123,8 @@ block content
                             .cb-outro-list-item: a(href="https://quizoid.netlify.app/", target="_blank") Quizoid
                             .cb-outro-list-item: a(href="https://go-search.netlify.app/", target="_blank") GoSearch
                             .cb-outro-list-item: a(href="https://chat-room-28.netlify.app/", target="_blank") ChatRoom
-            section.cb-outro
+
+            section.cb-outro#contributions
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
@@ -124,7 +132,8 @@ block content
                         .cb-outro-list
                             .cb-outro-list-item: a(href="https://www.npmjs.com/package/load-animations-react", target="_blank") React Loading animations
                             .cb-outro-list-item: a(href="https://www.npmjs.com/package/react-stt", target="_blank") Speech to text react
-            section.cb-outro
+                            
+            section.cb-outro#social
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
