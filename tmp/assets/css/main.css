@@ -462,6 +462,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden !important;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+             supported by Chrome, Edge, Opera and Firefox */
 }
 
 * {
@@ -496,11 +508,19 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-a, button, label, input {
+a,
+button,
+label,
+input {
   -webkit-tap-highlight-color: transparent;
 }
 
-img, svg, canvas, audio, video, iframe {
+img,
+svg,
+canvas,
+audio,
+video,
+iframe {
   vertical-align: middle;
 }
 
@@ -508,17 +528,30 @@ figure {
   margin: 0;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
   cursor: pointer;
 }
 
-p, h1, h2, h3, h4, h5, h6, blockquote {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
   margin: 0;
   padding: 0;
 }
