@@ -28909,6 +28909,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _particles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./particles */ "./src/js/particles.js");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /*** IMPORTS FROM imports-loader ***/var define=false;// GSAP ScrollTrigger & Soft Edges plugin for SmoothScroll
 smooth_scrollbar__WEBPACK_IMPORTED_MODULE_0__["default"].use(vendor_smooth_scrollbar_ScrollTriggerPlugin__WEBPACK_IMPORTED_MODULE_1__["default"],vendor_smooth_scrollbar_SoftScrollPlugin__WEBPACK_IMPORTED_MODULE_2__["default"]);// Init smooth scrollbar
 var view=document.getElementById("view-main");var scrollbar=smooth_scrollbar__WEBPACK_IMPORTED_MODULE_0__["default"].init(view,{renderByPixels:false,damping:0.075});// Simple tabs logic
@@ -28921,7 +28922,7 @@ var tl=gsap__WEBPACK_IMPORTED_MODULE_4__["default"].timeline({paused:true});var 
 tl.fromTo(demoHeader,{opacity:0,yPercent:220,skewY:5},{opacity:1,yPercent:0,skewY:0,duration:3,ease:"expo.out"},0);// Animate particles timeScale
 tl.fromTo(particles.getTimeline(),{timeScale:10},{timeScale:1,duration:3},0);setTimeout(function(){return tl.play();});var marquee=document.querySelectorAll(".cb-marquee");marquee.forEach(function(e){// Create swiper carousel
 var carousel=e.querySelectorAll(".cb-marquee-carousel");carousel.forEach(function(e){var items=e.querySelector(".cb-marquee-items");var item=e.querySelectorAll(".cb-marquee-item");e.classList.add("swiper-container");items.classList.add("swiper-wrapper");item.forEach(function(e){return e.classList.add("swiper-slide");});var slider=new swiper__WEBPACK_IMPORTED_MODULE_5__["default"](e,{slidesPerView:"auto",loop:true,freeMode:true,freeModeMomentumBounce:false,freeModeMomentumVelocityRatio:0.3});});// Scroll triggered movement
-var tl=new gsap__WEBPACK_IMPORTED_MODULE_4__["default"].timeline();tl.set(carousel,{willChange:"transform"});tl.fromTo(carousel[0],{x:-300},{x:0,ease:"none"},0);tl.fromTo(carousel[1],{x:300},{x:0,ease:"none"},0);tl.set(carousel,{willChange:"auto"});ScrollTrigger.create({trigger:e,animation:tl,start:"top bottom",end:"bottom top",scrub:0.3,refreshPriority:-14});});
+var tl=new gsap__WEBPACK_IMPORTED_MODULE_4__["default"].timeline();tl.set(carousel,{willChange:"transform"});tl.fromTo(carousel[0],{x:-300},{x:0,ease:"none"},0);tl.fromTo(carousel[1],{x:300},{x:0,ease:"none"},0);tl.set(carousel,{willChange:"auto"});gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_6__["default"].create({trigger:e,animation:tl,start:"top bottom",end:"bottom top",scrub:0.3,refreshPriority:-14});});
 
 /***/ }),
 
