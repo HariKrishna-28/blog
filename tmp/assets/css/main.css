@@ -743,14 +743,23 @@ em {
        -o-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
           transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
+.cb-marquee-items a > video {
+  display: none;
+}
 @media (min-width: 768px) {
   .cb-marquee-items {
     height: 250px;
+  }
+  .cb-marquee-items a > video {
+    display: block;
   }
 }
 @media (min-width: 1600px) {
   .cb-marquee-items {
     height: 250px;
+  }
+  .cb-marquee-items a > video {
+    display: block;
   }
 }
 .cb-marquee-item {
