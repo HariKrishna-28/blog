@@ -695,7 +695,8 @@ em {
   z-index: 11;
   padding-bottom: 20vh;
 }
-.cb-marquee-header h1, .cb-marquee-header h2 {
+.cb-marquee-header h1,
+.cb-marquee-header h2 {
   position: relative;
   font-size: 5vw;
   font-weight: 900;

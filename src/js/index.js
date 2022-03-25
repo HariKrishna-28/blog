@@ -3,6 +3,7 @@ import ScrollTriggerPlugin from "vendor/smooth-scrollbar/ScrollTriggerPlugin";
 import SoftScrollPlugin from "vendor/smooth-scrollbar/SoftScrollPlugin";
 import Particles from "./particles";
 import gsap from "gsap";
+import Swiper from "swiper";
 
 // GSAP ScrollTrigger & Soft Edges plugin for SmoothScroll
 SmoothScrollbar.use(ScrollTriggerPlugin, SoftScrollPlugin);
