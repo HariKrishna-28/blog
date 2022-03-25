@@ -7,9 +7,17 @@ block content
 
     .cb-layout#view-main
         .cb-content
-
             .cb-tabs.-inverse
                 .cb-tabs-navs
+                    h3 
+                        a(href="#about") ABOUT
+                    h3
+                        a(href="#projects") PROJECTS
+                    h3
+                        a(href="#contributions") CONTRIBUTIONS
+                    h3
+                        a(href="#social") SOCIAL
+                    
                     //- .cb-tabs-nav.-active
                     //- .cb-tabs-nav
                     //- .cb-tabs-nav
@@ -24,9 +32,11 @@ block content
                             .cb-particles-item.-text.-v6.-s4: span NextJs
                             .cb-particles-item.-text.-v7.-s4: span Python
                             .cb-particles-item.-text.-v8.-s4: span Java
+                            .cb-particles-item.-text.-v8.-s4: span Heroku
                             .cb-particles-item.-text.-v9.-s4: span Postman
                             .cb-particles-item.-text.-v10.-s4: span Git
                             .cb-particles-item.-text.-v11.-s4: span Firebase
+                            .cb-particles-item.-text.-v11.-s4: span Netlify
                             .cb-particles-item.-text.-v11.-s4: span Html
                             .cb-particles-item.-text.-v11.-s4: span Css
                             .cb-particles-item.-text.-v11.-s4: span Bootstrap
@@ -75,8 +85,90 @@ block content
                                 .cb-demo-header
                                     h1 Awesome#[br] particles
                                 
+            section.cb-outro#about
+                .cb-outro-content
+                    .cb-outro-container
+                        .cb-outro-header
+                            h2 About
+                            img(src="../../assets/img/profile.jpeg", alt="profile", draggable="false")
+                        .cb-outro-list
+                            .cb-outro-list-item: span I am a self taught web developer and python programmer. I seek challenging opportunities where I can fully use my skills for the success of the organisation.
+            
+            section.cb-outro#areas-of-interest
+                .cb-outro-content
+                    .cb-outro-container
+                        .cb-outro-header
+                            h2 Areas of Interest
 
-            section.cb-outro
+                        .cb-outro-list
+                            .cb-outro-list-item: span Full stack web development
+
+            section.cb-outro#currently-learning
+                .cb-outro-content
+                    .cb-outro-container
+                        .cb-outro-header
+                            h2 Currently Learning
+
+                        .cb-outro-list
+                            .cb-outro-list-item: span NextJs and SailsJs
+                        
+
+            section.cb-marquee#projects
+                .cb-marquee-content
+                    .cb-marquee-main
+                        .cb-marquee-header
+                            h1 Projects#[br] 
+                            .cb-outro-list-item: span Click to know more
+                        .cb-marquee-carousel.-v1
+                            .cb-marquee-items
+                                .cb-marquee-item
+                                    a(href="./components/covid-tracker.html") 
+                                        video(src="/assets/img/covid19.mp4", autoplay, loop, type="video/mp4")
+                                    h3 Covid-19 Tracker
+                                .cb-marquee-item
+                                    a(href="https://github.com/HariKrishna-28", target="_blank") 
+                                        video(src="../../assets/img/gosearch.mp4", autoplay, loop, type="video/mp4")
+                                    h3 GoSearch
+                                .cb-marquee-item
+                                    a(href="https://github.com/HariKrishna-28", target="_blank") 
+                                        video(src="../../assets/img/quizoid.mp4", autoplay, loop, type="video/mp4")
+                                    h3 Quizoid
+                                //- .cb-marquee-item
+                                //-     img(src="/assets/img/5.jpeg", alt)
+                                //- .cb-marquee-item
+                                //-     img(src="/assets/img/6.jpeg", alt)
+                                //- .cb-marquee-item
+                                //-     img(src="/assets/img/7.jpeg", alt)
+                                //- .cb-marquee-item
+                                //-     img(src="/assets/img/8.jpeg", alt)
+                                //- .cb-marquee-item
+                                //-     img(src="/assets/img/9.jpeg", alt)
+                                //- .cb-marquee-item
+                                //-     img(src="/assets/img/10.jpeg", alt)
+                        //- .cb-marquee-carousel.-v2
+                            .cb-marquee-items
+                                .cb-marquee-item
+                                    img(src="/assets/img/5.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/4.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/2.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/3.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/1.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/6.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/7.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/8.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/9.jpeg", alt)
+                                .cb-marquee-item
+                                    img(src="/assets/img/10.jpeg", alt)
+            
+            //- section.cb-outro#projects
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
@@ -87,7 +179,8 @@ block content
                             .cb-outro-list-item: a(href="https://quizoid.netlify.app/", target="_blank") Quizoid
                             .cb-outro-list-item: a(href="https://go-search.netlify.app/", target="_blank") GoSearch
                             .cb-outro-list-item: a(href="https://chat-room-28.netlify.app/", target="_blank") ChatRoom
-            section.cb-outro
+
+            section.cb-outro#contributions
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
@@ -95,7 +188,8 @@ block content
                         .cb-outro-list
                             .cb-outro-list-item: a(href="https://www.npmjs.com/package/load-animations-react", target="_blank") React Loading animations
                             .cb-outro-list-item: a(href="https://www.npmjs.com/package/react-stt", target="_blank") Speech to text react
-            section.cb-outro
+                            
+            section.cb-outro#social
                 .cb-outro-content
                     .cb-outro-container
                         .cb-outro-header
@@ -104,4 +198,7 @@ block content
                             .cb-outro-list-item: a(href="https://github.com/HariKrishna-28", target="_blank") Github
                             .cb-outro-list-item: a(href="https://linkedin.com/in/hari-krishna-b02466207", target="_blank") LinkedIn
                             .cb-outro-list-item: a(href="https://www.hackerrank.com/Harikrishna28", target="_blank") Hackerrank
+
+
+            //- include components/featured_products.pug
                             
