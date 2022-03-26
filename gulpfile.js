@@ -11,6 +11,9 @@
 const gulp = require("gulp");
 const fs = require("fs");
 
+const $ = require("gulp-load-plugins")({
+    pattern: ["gulp-*", "gulp.*", "del", "merge-stream"],
+});
 const browserSync = require("browser-sync");
 const plumber = require("gulp-plumber");
 const pug = require("gulp-pug");
@@ -18,9 +21,6 @@ const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
 const del = require("del");
 const webpack = require("webpack-stream");
-const $ = require("gulp-load-plugins")({
-    pattern: ["gulp-*", "gulp.*", "del", "merge-stream"],
-});
 
 /* Primary tasks */
 gulp.task("default", (done) => {
@@ -160,6 +160,11 @@ gulp.task("sprites", (done) => {
     const cssStream = spriteData.css.pipe(gulp.dest("./src/scss/generated"));
 
     return $.mergeStream(imgStream, cssStream);
+});
+
+/* FS tasks */
+gulp.task("clean", () => {
+    return $.del(["./tmp/**/*"], { dot: true });
 });
 
 gulp.task("clean:dist", () => {
