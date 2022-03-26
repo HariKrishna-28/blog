@@ -9,6 +9,11 @@
 
 /* Get plugins */
 const gulp = require("gulp");
+const fs = require("fs");
+
+const $ = require("gulp-load-plugins")({
+    pattern: ["gulp-*", "gulp.*", "del", "merge-stream"],
+});
 const browserSync = require("browser-sync");
 const plumber = require("gulp-plumber");
 const pug = require("gulp-pug");
@@ -99,4 +104,75 @@ gulp.task("watch", () => {
 /* FS tasks */
 gulp.task("clean", () => {
     return del(["./tmp/**/*"], { dot: true });
+});
+
+gulp.task("build", (done) => {
+    gulp.series(
+        "clean:dist",
+        gulp.parallel("sprites", "svgsprites"),
+        gulp.parallel("sass", "js", "copy:static"),
+        "pug"
+    )(done);
+});
+
+gulp.task("svgsprites", (done) => {
+    if (!fs.existsSync("./src/icons/") && !done()) return false;
+    const config = getConfig("svgsprites");
+    const svgSpriteOptions = {
+        mode: {
+            symbol: {
+                dest: "assets/img/sprites/",
+                sprite: "svgsprites.svg",
+                render: {
+                    scss: {
+                        dest: "../../../../src/scss/generated/svgsprites.scss",
+                        template: "./src/scss/templates/svgsprites.handlebars",
+                    },
+                },
+            },
+        },
+    };
+
+    return gulp
+        .src("./src/icons/*.svg")
+        .pipe($.svgSprite(svgSpriteOptions))
+        .pipe(gulp.dest(config.dest));
+});
+
+gulp.task("sprites", (done) => {
+    if (!fs.existsSync("./src/sprites/") && !done()) return false;
+    const config = getConfig("sprites");
+    const spriteData = gulp.src("./src/sprites/**/*.png").pipe(
+        $.spritesmith({
+            imgPath: "../img/sprites/sprites.png",
+            imgName: "sprites.png",
+            retinaImgPath: "../img/sprites/sprites@2x.png",
+            retinaImgName: "sprites@2x.png",
+            retinaSrcFilter: ["./src/sprites/**/**@2x.png"],
+            cssName: "sprites.scss",
+            cssTemplate: "./src/scss/templates/sprites.handlebars",
+            padding: 1,
+        })
+    );
+
+    const imgStream = spriteData.img.pipe(gulp.dest(config.dest));
+
+    const cssStream = spriteData.css.pipe(gulp.dest("./src/scss/generated"));
+
+    return $.mergeStream(imgStream, cssStream);
+});
+
+/* FS tasks */
+gulp.task("clean", () => {
+    return $.del(["./tmp/**/*"], { dot: true });
+});
+
+gulp.task("clean:dist", () => {
+    return $.del(["./dist/**/*"], { dot: true });
+});
+
+gulp.task("copy:static", () => {
+    return gulp
+        .src(["./src/static/**/*"], { dot: true })
+        .pipe(gulp.dest("./dist/"));
 });
