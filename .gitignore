@@ -25,6 +25,6 @@ bower_components
 
 # Project
 # /dist/
-/build/
-# /tmp/
+# /build/
+/tmp/
 /src/scss/generated

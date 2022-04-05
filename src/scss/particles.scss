@@ -14,6 +14,10 @@
     contain:content;
     pointer-events:none;
 
+    img{
+        border-radius: 10px;
+    }
+
     &-item {
         $this:&;
 
@@ -40,47 +44,71 @@
 
         /* Positions */
         &.-v1 {
-            left:8%;
-        }
-
-        &.-v2 {
             left:2%;
         }
 
+        &.-v2 {
+            left:11%;
+        }
+
         &.-v3 {
-            left:89%;
+            left:17%;
         }
 
         &.-v4 {
-            left:80%;
+            left:22%;
         }
 
         &.-v5 {
-            left:75%;
+            left:28%;
         }
 
         &.-v6 {
-            left:20%;
+            left:33%;
         }
 
         &.-v7 {
-            left:12%;
+            left:39%;
         }
 
         &.-v8 {
-            left:95%;
+            left:45%;
         }
 
         &.-v9 {
-            left:40%;
+            left:51%;
         }
 
         &.-v10 {
-            left:52%;
+            left:56%;
         }
 
         &.-v11 {
-            left:57%;
+            left:62%;
+        }
+
+        &.-v12 {
+            left: 68%;
+        }
+
+        &.-v13 {
+            left: 72%;
+        }
+        
+        &.-v14 {
+            left: 78%;
+        }
+
+        &.-v15 {
+            left: 82%;
+        }
+
+        &.-v16 {
+            left: 86%;
+        }
+
+        &.-v17 {
+            left: 96%;
         }
 
         /* Sizes */
