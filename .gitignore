@@ -24,7 +24,7 @@ bower_components
 .env
 
 # Project
-# /dist/
-# /build/
+/dist/
+/build/
 /tmp/
 /src/scss/generated
